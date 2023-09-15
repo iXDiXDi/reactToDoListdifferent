@@ -1,0 +1,74 @@
+.app {
+	text-align: center;
+}
+
+.wrapper {
+	margin: 0;
+	list-style: none;
+	background: #e8e8e8;
+	padding: 10px;
+	text-align-last: center;
+}
+
+.wrapper div {
+	position: relative;
+	margin: 0 0 10px 2em;
+	padding: 4px 8px;
+	border-top: 2px solid #787a77;
+	transition: 0.3s linear;
+}
+
+.wrapper div:last-child {
+	margin-bottom: 0;
+}
+.wrapper div:before {
+	position: absolute;
+	top: -2px;
+	left: -2em;
+	width: 2em;
+	box-sizing: border-box;
+	margin-right: 8px;
+	padding: 4px;
+	border-top: 2px solid #787a77;
+	border-left: 2px solid transparent;
+	border-right: 2px solid transparent;
+	border-bottom: 2px solid transparent;
+	background: #787a77;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	transition: 0.3s linear;
+}
+.wrapper div:hover {
+	border-top: 2px solid #389f70;
+}
+.wrapper div:hover:before {
+	border: 2px solid #389f70;
+	background: #98eaba;
+}
+
+.list{
+	
+}
+
+.loader {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 25px;
+	height: 25px;
+	border: 5px solid gray;
+	border-radius: 50%;
+	border-left-color: transparent;
+	animation: loader 2s infinite;
+}
+
+@keyframes loader {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(1080deg);
+	}
+}
