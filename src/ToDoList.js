@@ -14,28 +14,30 @@ export const ToDoList = () => {
 			.finally(() => setIsLoading(false));
 	}, []);
 
-	console.log('toDoListState', toDoListState);
-
 	return (
 		<>
 			<p>Здесь могла бы быть ваша реклама :-)</p>
-			<p>toDoListState</p>
+			<br></br>
+			<p>'https://jsonplaceholder.typicode.com/todos/'</p>
 			<div className={styles.app}>
 				{isLoading ? (
 					<div className={styles.loader}></div>
 				) : (
 					toDoListState.map(({ id, userId, title, completed }) => (
-						<div key={id} className={styles.wrapper}>
-							<div className={styles.list}>
-								<span>{id}</span>
-								<span>{userId}</span>
-								<span>{title}</span>
-								<span>{completed ? 'False' : 'True'}</span>
+						<div key={id} className={styles.container}>
+							<div className={styles.box_1}>{id}</div>
+							<div className={styles.box_2}>{userId}</div>
+							<div className={styles.box_3}>{title}</div>
+							<div className={styles.box_4}>
+								{completed ? (
+									<span className={styles.red}>False</span>
+								) : (
+									<span className={styles.green}>True</span>
+								)}
 							</div>
 						</div>
 					))
 				)}
-				<button>Добавить заметку</button>
 			</div>
 		</>
 	);
