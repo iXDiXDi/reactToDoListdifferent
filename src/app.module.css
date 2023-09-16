@@ -26,7 +26,7 @@ body {
 	column-gap: 0px;
 	row-gap: 0px;
 	justify-items: stretch;
-	grid-template-areas: 'A B C';
+	grid-template-areas: 'A B C D';
 }
 
 .container:nth-child(2n) {
@@ -43,6 +43,10 @@ body {
 
 .box_3 {
 	grid-area: C;
+}
+
+.box_4 {
+	grid-area: D;
 }
 
 .loader {
